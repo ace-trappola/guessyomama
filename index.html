@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Guess Who</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #0d1117;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
+      gap: 15px;
+      max-width: 800px;
+    }
+
+    .card {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid #30363d;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .eliminated {
+      opacity: 0.15; 
+    }
+    
+    .card:hover {
+      border-color: #58a6ff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="board">
+    <img src="https://github.com/torvalds.png" alt="Linus" class="card" onclick="this.classList.toggle('eliminated')">
+    <img src="https://github.com/yyx990803.png" alt="Evan" class="card" onclick="this.classList.toggle('eliminated')">
+    <img src="https://github.com/gaearon.png" alt="Dan" class="card" onclick="this.classList.toggle('eliminated')">
+    <img src="https://github.com/Rich-Harris.png" alt="Rich" class="card" onclick="this.classList.toggle('eliminated')">
+    <img src="https://github.com/tj.png" alt="TJ" class="card" onclick="this.classList.toggle('eliminated')">
+    <img src="https://github.com/getify.png" alt="Kyle" class="card" onclick="this.classList.toggle('eliminated')">
+    <img src="https://github.com/sindresorhus.png" alt="Sindre" class="card" onclick="this.classList.toggle('eliminated')">
+    <img src="https://github.com/defunkt.png" alt="Chris" class="card" onclick="this.classList.toggle('eliminated')">
+  </div>
+
+</body>
+</html>
